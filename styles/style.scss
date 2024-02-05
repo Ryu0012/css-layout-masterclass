@@ -1,101 +1,115 @@
+@import "./reset.scss";
+
 $padding: 10px;
 
 * {
-  padding: 0; 
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
   list-style: none;
 }
 
-.main {
-  background-color: black;
+body {
+  background: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 100px 1fr;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 850px;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
 }
 
 .header {
-  width: max-content;
   overflow-x: hidden;
   &__list {
-    height: 100%;
     display: flex;
-    align-items: center;
+    gap: 10px;
+    color: white;
+    width: max-content;
     &-item {
-      border: 1px solid white;
+      border: 1px solid rgba($color: #fff, $alpha: 0.8);
       border-radius: 1.5em;
       padding: 10px 15px;
-      margin-right: $padding;
-      &:first-child {
-        margin-left: $padding;
+      &--inverted {
         background-color: white;
-        a{
-          color: black;
-        }
-      }
-      a {
-        color: white;
+        color: black;
       }
     }
   }
 }
-.box {
-  &__title {
-    font-size: 1.8em;
-    line-height: 1;
-  }
-  &__footer {
-    font-size: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .price {
-      border-radius: 2em; 
-      border: 1px solid black; 
-      padding: 8px $padding;       
-    }
-    .length {
-      border-radius: 50%;
-      border: 1px solid black;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    } 
-  }
-}
-
 .boxs {
-  font-family: 'Nanum Myeongjo', serif;
-  text-decoration: none;
-  list-style-type: none;
-  height: 100%;
-  width: 100vw;
-  display: grid;
-  justify-content: center;
+  margin: 20px 0px;
+  display:grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4,1fr);
-  padding: 0 15px;
-  gap: 8px;
-  &__box {
+  gap: 10px;
+  .boxs__box {
     background-color: white;
-    border-radius: 1.5em;
-    padding: 1em;
-    line-height: 130%;
+    padding: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     justify-content: space-between;
-    font-weight: 500;
-    &:first-child{
-      background-color: #292D33;
-      color: white;
+    .box__title {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .box__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        padding: 5px 10px;
+        border-radius: 20px;
+        border: 1px solid black;
+      }
+      .price {
+        background-color: rgb(255, 221, 44);
+      }
+      .length {
+        background-color: white;
+      } 
+    }
+    &:first-child {
+      background-color: #292d33;
       border: 1px solid white;
+      color: white;
+      .box__footer {
+        flex-direction: column;
+        align-items: start;
+        padding: 5px;
+      }
+      .percent{
+        &-number {
+          color: white;
+          border: none;
+          margin-bottom: 5px;
+          font-size: 20px;
+          padding-left: 0;
+        }
+        &-bar {
+          background-color: rgb(63, 63, 63);
+          width: 100%;
+          height: 5px;
+          border-radius: 1rem;
+          &--white {
+            border-radius: inherit;
+            width: 55%;
+            height: 100%;
+            background-color: whitesmoke
+            ;
+          }
+        }
+      }
     }
     &:nth-child(2) {
-        background-color: #FDFDFC;
+      background-color: #FDFDFC;
     }
     &:nth-child(3) {
       background: linear-gradient(rgba(247, 252, 178, 1), #FBFECF);
@@ -117,30 +131,8 @@ $padding: 10px;
     &:nth-child(6) {
       background: linear-gradient(#CEFEDC, #cefedcec);
     }
-    &:nth-of-type(2n) {
-      .price {
-        background-color: yellow;
-      }
-    }
-    &:nth-of-type(3n) {
+    &:nth-child(3n) {
       grid-column: span 2;
-      .box__footer {
-        .length {
-          width: max-content;
-          padding: 5px $padding;
-          border-radius: 2em;
-        }
-      }
     }
   }
 }
-
-
-  // 
-  // 
-
-
-
-      
-    
-  
