@@ -4,65 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.scss" />
-    <title>CSS Layout Masterclass</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+    </style>
+    <title>02.png CSS layout</title>
   </head>
   <body>
     <div class="phone">
       <header class="header">
-        <ul class="header__list">
-          <li class="header__list-item header__list-item--inverted">All</li>
-          <li class="header__list-item">Advertising</li>
-          <li class="header__list-item">Dev & Data Science</li>
-          <li class="header__list-item">Graphic</li>
-        </ul>
-      </header>
+        <span class="header__btn"
+          ><i class="fa-solid fa-chevron-left"></i
+          ><i class="fa-solid fa-bars"></i
+        ></span>
 
-      <div class="boxs">
-        <div class="boxs__box">
-          <span class="box__title"> The Marking of Modern ... </span>
-          <footer class="box__footer">
-            <span class="percent-number">63%</span>
-            <div class="percent-bar">
-              <div class="percent-bar--white"></div>
+        <h1 class="header__title">MY CART</h1>
+        <span class="header__btn"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></span>
+      </header>
+      <section class="total">
+        <span class="total__price">$ 3550</span
+        ><span class="total__subtitle">based on your 5 items</span>
+      </section>
+      <section class="items">
+        <article class="item">
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">Pop Temple Print T- shirt</h2>
+              <h3 class="item__subtitle">versace limited 2021</h3>
             </div>
-          </footer>
-        </div>
-        <div class="boxs__box">
-          <span class="box__title">Mobile Interfaces Advanced</span>
-          <footer class="box__footer">
-            <span class="price">Free</span>
-            <span class="length">2</span>
-          </footer>
-        </div>
-        <div class="boxs__box">
-          <span class="box__title">Graphic Design. Professium</span>
-          <footer class="box__footer">
-            <span class="price">$199/month</span>
-            <span class="length">9 months</span>
-          </footer>
-        </div>
-        <div class="boxs__box">
-          <span class="box__title">Web Design Junior</span>
-          <footer class="box__footer">
-            <span class="price">Free</span>
-            <span class="length">3</span>
-          </footer>
-        </div>
-        <div class="boxs__box">
-          <span class="box__title">Inclusive Web Design</span>
-          <footer class="box__footer">
-            <span class="price">$99/mon</span>
-            <span class="length">3</span>
-          </footer>
-        </div>
-        <div class="boxs__box">
-          <span class="box__title">Machine Learning Professium</span>
-          <footer class="box__footer">
-            <span class="price">Free</span>
-            <span class="length">6 months</span>
-          </footer>
-        </div>
-      </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$ 1990</span>
+              <div class="item__piece-price">$ 995 per piece</div>
+            </div>
+          </div>
+          <div class="item__specs">
+            <div class="spec">
+              <div class="spec-col">
+                <span class="spec__title">Size</span>
+                <div class="spec__value">48 -L</div>
+              </div>
+              <div class="spec-col">
+                <i class="fa-solid fa-arrow-down"></i>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-col">
+                <span class="spec__title">QT</span>
+                <div class="spec__value">2 pcs</div>
+              </div>
+              <div class="spec-col">
+                <i class="fa-solid fa-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+          <img src="http://source.unsplash.com/random" class="item__photo" />
+        </article>
+        <article class="item">
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">Pop Temple Print T- shirt</h2>
+              <h3 class="item__subtitle">limited 2002</h3>
+            </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$ 850</span>
+              <div class="item__piece-price">$ 995 per piece</div>
+            </div>
+          </div>
+          <div class="item__specs">
+            <div class="spec">
+              <span class="spec__title">Size</span>
+              <div class="spec__value">48 -L</div>
+            </div>
+            <div class="spec">
+              <span class="spec__title">QT</span>
+              <div class="spec__value">2 pcs</div>
+            </div>
+          </div>
+          <img
+            src="http://source.unsplash.com/random/black"
+            class="item__photo"
+          />
+        </article>
+      </section>
     </div>
+    <script
+      src="https://kit.fontawesome.com/c47a47dbc9.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
